@@ -1,0 +1,40 @@
+/* Kestrel Courier — page chrome. The game itself is drawn on the canvas;
+   this file only centres it on a dark sky-coloured page and keeps the
+   fallback text readable when JavaScript is off. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a1220;
+  height: 100%;
+  overflow: hidden;
+}
+
+#stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#game {
+  display: block;
+  background: #2f6fb8;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+}
+
+#fallback {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  color: rgba(255, 255, 255, 0.65);
+  font: 13px sans-serif;
+  text-align: center;
+  margin: 0;
+  pointer-events: none;
+}
